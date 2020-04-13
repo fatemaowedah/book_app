@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/incons.css">
-    <link rel="stylesheet" href="/styles/layout.css">
-    <link rel="stylesheet" href="/styles/modules.css">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <!-- <link rel="stylesheet" href="/styles/reset.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/incons.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/modules.css"> -->
+</head>
+
 <body>
-    <header>
-        <h1>Hello World</h1>
-    </header>
+  <header>
+    <h1>Hello World</h1>
+    <section>
+      <%booksTable.forEach(book =>{%>
+      <article>
+        <img src=<%= book.img_url%>>
+        <h4><%= book.title%></h4>
+        <p><%= book.authors%></p>
+        <p><%= book.description%></p>
+        <h5><%= book.isbn%></h5>
+        <h5><%= book.bookshelf%></h5>
+      </article>
+      <% }) %>
+    </section>
+  </header>
 </body>
+
 </html>
