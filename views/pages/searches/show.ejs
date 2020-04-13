@@ -14,18 +14,18 @@
 </head>
 
 <body>
-    <h1>Search Results</h1>
-    <ul>
-        <% books.forEach(book => { %>
-        <li>
-            <p><%= book.title %></p>
-            <p><img src=<%= book.img_url %>></p>
-            <p><%= book.authors%></p>
-            <p><%= book.description%></p>
-        </li>
-        <% }) %>
-    </ul>
-
+    <h1>Best Books!</h1>
+    <h2>Search Results</h2>
+        <ul>
+            <% books.forEach(book => { %>
+            <li>
+                <p><%= book.title %></p>
+                <p><img src=<%= book.img_url %>></p>
+                <p><%= book.authors%></p>
+                <p><%= book.description%></p>
+            </li>
+            <% }) %>
+        </ul>
 </body>
 
 </html>
