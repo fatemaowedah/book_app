@@ -26,6 +26,7 @@ function newSearch(request, response) {
 
 app.get('/searches/show', renderForm);
 app.post('/searches/show', findBook);
+app.use('*', notFoundHandler);
 
 function renderForm(req, res) {
     res.render('pages/searches/new');
@@ -45,6 +46,8 @@ function findBook(req, res) {
                 return new Book(element)
             })
             res.render('pages/searches/show', { books: books })
+        }).catch((err) => {
+            errorHandler(err, req, res);
         });
 }
 
@@ -58,6 +61,9 @@ function Book(data) {
 app.listen(PORT, () => console.log(`runing in port ${PORT}`))
 /////////////////////////////////////////////////////////
 
-app.get('/*', (req, res) => {
-  res.status(404).render('./pages/error')
-})
+function notFoundHandler(req, res) {
+    res.status(404).send('PAGE NOT FOUND');
+}
+function errorHandler(err, req, res) {
+    res.status(500).render('pages/error-view', { error: err });
+}
