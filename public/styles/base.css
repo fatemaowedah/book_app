@@ -4,3 +4,20 @@ body{
 h1{
     text-align: center;
 }
+ul{
+    width: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+li{
+    background-color: darkgray;
+    border: 1px black;
+    clear: both;
+}
+form{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
