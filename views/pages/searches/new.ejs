@@ -4,16 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../styles/base.css">
+  <link rel="stylesheet" href="../../../styles/modules.css">
+  <link rel="stylesheet" href="../../../styles/layout.css">
   <title>Form</title>
-  <link rel="stylesheet" href="/styles/reset.css">
-  <link rel="stylesheet" href="/styles/base.css">
-  <link rel="stylesheet" href="/styles/incons.css">
-  <link rel="stylesheet" href="/styles/layout.css">
-  <link rel="stylesheet" href="/styles/modules.css">
-
 </head>
+
 <body>
-  <form id="createForm" action="/searches/show" method="POST">
+  <p id="p1">Best Book!</p>
+  <p id="p2">Search by Title or Author</p>
+  <form id="create-form" action="/searches/show" method="POST">
     <input type="text" name="keyword" placeholder="Enter a title or author" required>
     <fieldset>
       <label for="title">
@@ -29,7 +29,6 @@
     </fieldset>
     <button class="lng-btn" type="submit">Search the Google Books API</button>
   </form>
-
 </body>
 
 </html>
